@@ -43,8 +43,6 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.settingTableDataGrid = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.firstPassErrorTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -64,6 +62,8 @@
             this.secondPassButton = new System.Windows.Forms.Button();
             this.exampleComboBox = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.operationCodeDataGrid)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -228,18 +228,6 @@
             this.settingTableDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.settingTableDataGrid.Size = new System.Drawing.Size(203, 140);
             this.settingTableDataGrid.TabIndex = 10;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "Адрес";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Метка";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // label7
             // 
@@ -439,6 +427,18 @@
             this.label9.Size = new System.Drawing.Size(112, 17);
             this.label9.TabIndex = 10;
             this.label9.Text = "Выбор примера";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "Адрес";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "Секция";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // Form1
             // 
