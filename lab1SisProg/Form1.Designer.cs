@@ -436,9 +436,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label9.Location = new System.Drawing.Point(916, 632);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(112, 17);
+            this.label9.Size = new System.Drawing.Size(126, 17);
             this.label9.TabIndex = 10;
-            this.label9.Text = "Выбор примера";
+            this.label9.Text = "Выбор адресации";
             // 
             // Form1
             // 
