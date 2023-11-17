@@ -32,6 +32,10 @@ namespace lab1SisProg
             fsp = new FSPass();
             dC = new DataCheck();
 
+            // Словарь для хранения меток EXTREF для каждого управляющего сектора
+            Dictionary<string, List<string>> extRefLabels = new Dictionary<string, List<string>>();
+            string currentControlSection = "";
+
             List<string> marks = new List<string>();
 
             //помещаем ТКО в динамический массив
@@ -96,8 +100,20 @@ namespace lab1SisProg
                     else if (temp.Length == 2)
                     {
 
-                        if((temp[0] == "EXTREF") || (temp[0] == "EXTDEF"))
+                        if ((temp[0] == "EXTREF") || (temp[0] == "EXTDEF"))
                         {
+                            if (!extRefLabels.ContainsKey(currentControlSection))
+                            {
+                                extRefLabels[currentControlSection] = new List<string>();
+                            }
+
+                            if (extRefLabels[currentControlSection].Contains(temp[1]))
+                            {
+                                MessageBox.Show($"Метка EXTREF '{temp[1]}' уже определена!");
+                                return;
+                            }
+
+                            extRefLabels[currentControlSection].Add(temp[1]);
                             marks.Add(temp[1]);
                         }
 
@@ -212,6 +228,12 @@ namespace lab1SisProg
                 {
                     MessageBox.Show($"Синтаксическая ошибка в {i + 1} строке. Элементов в строке больше 4", "Внимание!");
                     return;
+                }
+
+                // Обновление текущего управляющего сектора при обнаружении ключевого слова "CSECT"
+                if (temp.Length >= 2 && temp[1] == "CSECT")
+                {
+                    currentControlSection = temp[0];
                 }
             }
 
